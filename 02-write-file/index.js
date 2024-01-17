@@ -5,7 +5,7 @@ const fs = require('fs');
 stdout.write('Write something\n');
 stdin.on('data', (dataWrite) => {
   if (dataWrite.toString().trim() === 'exit') process.exit();
-  fs.stat(path.join(__dirname, 'text.txt'), (err, stats) => {
+  fs.stat(path.join(__dirname, 'text.txt'), (err) => {
     if (err) {
       fs.writeFile(path.join(__dirname, 'text.txt'), dataWrite, (error) => {
         if (error) return console.error(error.message);
