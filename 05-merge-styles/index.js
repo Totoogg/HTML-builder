@@ -5,7 +5,7 @@ const output = fs.createWriteStream(
   path.join(__dirname, 'project-dist', 'bundle.css'),
 );
 
-fs.stat(path.join(__dirname, 'files-copy'), (err) => {
+fs.stat(path.join(__dirname, 'project-dist', 'bundle.css'), (err) => {
   if (err) {
     fs.writeFile(
       path.join(__dirname, 'project-dist', 'bundle.css'),
